@@ -69,8 +69,10 @@ namespace ConsoleApplicationClassProject
             else
                 bankMoney = 0;
 
-            Console.WriteLine("Enter your favorite ROYGBIV color  (Red, Orange, Yellow, Green, Blue, Indigo, Violet)?");
-            favColor = Console.ReadLine();
+            Console.WriteLine("Enter your favorite ROYGBIV color  (red, orange, yellow, green, blue, indigo, violet,)?");
+            favColor = (Console.ReadLine().ToLower());
+       
+            
             switch (favColor)
             {
                 case "red":
@@ -100,7 +102,7 @@ namespace ConsoleApplicationClassProject
 
                     ride = "van";
                     break;
-                case "voilet":
+                case "violet":
                     //Console.WriteLine("You ride a bike");
                     ride = "Bike";
                     break;
@@ -135,7 +137,7 @@ namespace ConsoleApplicationClassProject
                    // Console.WriteLine("Your vacation home is in Solon");
                     location = "Solon";
                 }
-                else if (numberofSiblings <= 4)
+                else if (numberofSiblings >= 4)
                 {
                    // Console.WriteLine("Your vacation home is in Garfield");
                     location = "Garfield";
@@ -149,6 +151,8 @@ namespace ConsoleApplicationClassProject
 
                 Console.WriteLine( "" + firstName+ " " + lastName + " will retire in " + retirementAge + " years" + " with $" + bankMoney+ " in the bank, a vacation home in " + location + " and a " + ride + ".");
             }
+
+            
         }
     }
 }
